@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>静香園</title>
+<meta name="description" content="柏で創業43年の日本茶専門店です。日本茶、抹茶、中国茶をはじめ、煎餅、落花生、急須、茶道具、コーヒー豆等を扱っております。贈答品や仏事、法事の取り扱いもございます。">
+<meta name="keyword" content="柏駅,日本茶">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/sp.css">
+<link rel="stylesheet" type="text/css" href="./css/flexslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDCFpFfwZ0hfNf2dCd85I_TOzaz16rBPlU"></script>
+<script src="./js/jquery.jrumble.1.3.js"></script>
+<script src="./js/map.js"></script>
+<script src="./js/jquery.flexslider.js"></script>
+<script>
+$(document).ready(function() {
+  if ($(window).width() >= 768) {
+    $(function() {
+      $('header').hide().fadeIn(3000);
+      $('nav').hide().fadeIn(7000);
+    });
+  }
+});
+</script>
+<script>
+  $(document).ready(function() {
+    if ($(window).width() <= 767) {
+      $(function() {
+        $('header').hide().fadeIn(3000);
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    if ($(window).width() >= 768) {
+      $(window).on('load',function(){
+        $(window).scroll(function (){
+          $('.fade_in').each(function(){
+            var POS = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > POS - windowHeight + windowHeight/4){
+                $(this).css("opacity","1" );
+            } else {
+                $(this).css("opacity","0" );
+            }
+          });
+        });
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    if ($(window).width() >= 768) {
+      $(window).on('load',function(){
+          $(window).scroll(function (){
+              $('.fade_up').each(function(){
+                  var POS = $(this).offset().top;
+                  var scroll = $(window).scrollTop();
+                  var windowHeight = $(window).height();
+                  if (scroll > POS - windowHeight){
+                      $(this).css({
+                              'opacity':'1',
+                              'transform':'translateY(0)',
+                              '-webkit-transform':'translateY(0)',
+                              '-moz-transform':'translateY(0)',
+                              '-ms-transform':'translateY(0)'
+                      });
+                  } else {
+                      $(this).css({
+                              'opacity':'0',
+                              'transform':'translateY(200px)',
+                              '-webkit-transform':'translateY(200px)',
+                              '-moz-transform':'translateY(200px)',
+                              '-ms-transform':'translateY(200px)'
+                      });
+                  }
+              });
+          });
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    if ($(window).width() >= 768) {
+      $(function(){
+        $('.jrum').jrumble({
+         	x: 0,
+         	y: 50,
+        	rotation: 3,
+        	speed: 300
+      	});
+        var jrStart = function(){
+          $('.jrum').trigger('startRumble');
+          setTimeout(jrStop, 800);
+        };
+        var jrStop = function(){
+          $('.jrum').trigger('stopRumble');
+          setTimeout(jrStart, 800);
+        };
+        jrStart();
+      });
+    }
+  });
+</script>
+
+<script>
+	$(document).ready(function() {
+		if ($(window).width() <= 767) {
+			$('.menu_open').each(function(){
+	    	$(this).css("height",$(this).height()+"px");
+			});
+			$('.menu_open').hide();
+			$('.menu_btn').click(function () {
+        $(this).next('.menu_open').slideToggle('slow');
+	    	$(this).toggleClass('active');
+			});
+		}
+	});
+</script>
+</head>
+<body>
+  <header>
+    <div class="header_wrap">
+      <h1><img src="./images/logo.png" alt="静香園"></h1>
+    </div>
+    <nav class="pc">
+      <ul>
+        <li><a href="#section01"><img src="./images/nav_btn01.png" alt="日本茶"></a></li>
+        <li><a href="#section02"><img src="./images/nav_btn02.png" alt="急須・茶碗"></a></li>
+        <li><a href="#section03"><img src="./images/nav_btn03.png" alt="茶菓子"></a></li>
+        <li><a href="#section04"><img src="./images/nav_btn04.png" alt="抹茶・茶道具"></a></li>
+        <li><a href="#section06"><img src="./images/nav_btn05.png" alt="アクセス"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="section01">
+      <h2 class="menu_btn"><img src="./images/section01_ttl.png" alt="日本茶"></h2>
+      <div class="menu_open">
+        <p>当店ではお茶の国・静岡から厳選されたお茶を仕入れています。お好みのお茶を量り売り、その場で真空パックして新鮮な状態でご提供いたします。静岡茶ならではの深い味わいをお楽しみください。</p>
+        <div class="content01">
+          <img src="./images/section01_content01_img.png" alt="玉露の写真" class="fade_in">
+          <h3><img src="./images/section01_content01_ttl.png" alt="玉露"></h3>
+          <p>最高級の緑茶です。渋みが少なく旨味が多い、贅沢な一品です。</p>
+        </div>
+        <div class="content02">
+          <img src="./images/section01_content02_img.png" alt="煎茶の写真" class="fade_in">
+          <h3><img src="./images/section01_content02_ttl.png" alt="煎茶"></h3>
+          <p>緑茶の中でも代表的な煎茶は、選りすぐった極上品はもちろん、御家庭向き・会社向きと種々にございます。</p>
+        </div>
+        <div class="content03">
+          <img src="./images/section01_content03_img.png" alt="深蒸し茶の写真" class="fade_in">
+          <h3><img src="./images/section01_content03_ttl.png" alt="深蒸し茶"></h3>
+          <p>深蒸し茶は渋みや苦みが少なく、まろやかで深みのあるお茶です。当店で１番人気のお茶です。</p>
+        </div>
+        <div class="content04">
+          <img src="./images/section01_content04_img.png" alt="くき茶の写真" class="fade_in">
+          <h3><img src="./images/section01_content04_ttl.png" alt="くき茶"></h3>
+          <p>くき茶は独特のさわやかな香りと甘みが特徴の飲みやすいお茶です。</p>
+        </div>
+        <div class="content05">
+          <img src="./images/section01_content05_img.png" alt="玄米茶の写真" class="fade_in">
+          <h3><img src="./images/section01_content05_ttl.png" alt="玄米茶"></h3>
+          <p>煎茶に炒った玄米を混ぜ合わせたブレンド茶で、玄米の香ばしい香りが引き立つお茶です。</p>
+        </div>
+        <div class="content06">
+          <img src="./images/section01_content06_img.png" alt="べにふうきの写真" class="fade_in">
+          <h3><img src="./images/section01_content06_ttl.png" alt="べにふうき"></h3>
+          <p>花粉症対策に効果のあるべにふうき緑茶。当店販売のべにふうきは花粉症抗アレルギー成分「メチルカテキン」が100mg/2490mgと高濃度。効果がある！とリピーター続出です。飲みやすい粉末スティックタイプをご用意しております。</p>
+        </div>
+      </div>
+    </section>
+    <img src="./images/line01.png" alt="" class="line_img pc">
+    <section id="section02">
+      <h2 class="menu_btn"><img src="./images/section02_ttl.png" alt="急須・茶碗"></h2>
+      <div class="menu_open">
+        <p>有田焼、美濃焼、萩焼、常滑焼などの高級品から普段使いのお手頃な価格のものまで豊富な種類の急須、茶碗を取り揃えております。</p>
+        <div class="pc">
+          <img src="./images/section02_img01.png" alt="急須" class="left fade_up">
+          <img src="./images/section02_img02.png" alt="急須">
+          <img src="./images/section02_img03.png" alt="急須" class="fade_up">
+          <img src="./images/section02_img04.png" alt="急須" class="right">
+          <img src="./images/section02_img05.png" alt="急須" class="left">
+          <img src="./images/section02_img06.png" alt="急須" class="fade_up">
+          <img src="./images/section02_img07.png" alt="急須">
+          <img src="./images/section02_img08.png" alt="急須" class="right fade_up">
+        </div>
+        <div class="sp">
+          <img src="./images/section02_img01.png" alt="急須" class="left">
+          <img src="./images/section02_img02.png" alt="急須" class="right">
+          <img src="./images/section02_img03.png" alt="急須" class="left">
+          <img src="./images/section02_img04.png" alt="急須" class="right">
+          <img src="./images/section02_img05.png" alt="急須" class="left">
+          <img src="./images/section02_img06.png" alt="急須" class="right">
+          <img src="./images/section02_img07.png" alt="急須" class="left">
+          <img src="./images/section02_img08.png" alt="急須" class="right">
+        </div>
+      </div>
+    </section>
+    <img src="./images/line02.png" alt="" class="line_img pc">
+    <section id="section03">
+      <h2 class="menu_btn"><img src="./images/section03_ttl.png" alt="茶菓子"></h2>
+      <div class="menu_open">
+        <p>柏名産の柏火山焼きをはじめ、お茶のお供に最適なお煎餅、羊羹、千葉県産落花生などを販売しております。</p>
+        <div class="pc">
+          <img src="./images/section03_img01.png" alt="急須" class="left jrum">
+          <img src="./images/section03_img02.png" alt="急須">
+          <img src="./images/section03_img03.png" alt="急須">
+          <img src="./images/section03_img04.png" alt="急須" class="right">
+        </div>
+        <div class="sp">
+          <img src="./images/section03_img02.png" alt="急須" class="left">
+          <img src="./images/section03_img01.png" alt="急須" class="right">
+          <img src="./images/section03_img04.png" alt="急須" class="left">
+          <img src="./images/section03_img03.png" alt="急須" class="right">
+        </div>
+      </div>
+    </section>
+    <img src="./images/line03.png" alt="" class="line_img pc">
+    <section id="section04">
+      <div class="section04_wrap">
+        <h2 class="menu_btn"><img src="./images/section04_ttl.png" alt="抹茶"></h2>
+        <div class="menu_open">
+          <p>京都宇治の老舗・丸久小山園の製品を取り扱っております。馥郁な覆香とまろやかな深い味わい、そして苦味が少ないのが丸久小山園のお抹茶の特徴です。濃茶用から薄茶用まで豊富な種類の抹茶をお選び頂けます。各種、プルトップ缶にて20g, 40g, 100gのサイズをご用意しております。</p>
+          <img src="./images/section04_img_sp.jpg" alt="抹茶" class="sp">
+        </div>
+      </div>
+    </section>
+    <section id="section05">
+      <div class="section05_wrap">
+        <h2 class="menu_btn"><img src="./images/section05_ttl.png" alt="茶道具"></h2>
+        <div class="menu_open">
+          <p>茶道具は柏随一の品揃え。経験豊かな方から入門者の方まできっとご満足いただけると自負しております。茶碗 、釜、風炉先屏風、柄杓、盆、水指、水注薬缶、茶筅、茶巾、茶巾筒、茶器、茶杓、蓋置、建水、台子、袱紗挟み、菓子器、香合、掛物、花入などを取り扱っております。お探しの商品がございましたらお気軽にお問い合わせ下さい。</p>
+          <img src="./images/section05_img_sp.jpg" alt="茶道具" class="sp">
+        </div>
+      </div>
+    </section>
+    <div id="g_map"></div>
+    <section id="section06">
+      <h2><img src="./images/section06_ttl.png" alt="アクセス"></h2>
+      <p>柏駅中央口・南口直結ファミリかしわの1Ｆです。お茶と書かれた黄色のノボリが目印です。地元の方にご愛顧頂いております。どうぞお気軽にお立ち寄りくださいませ。</p>
+      <div class="section06_contact">
+        <img src="./images/section06_txt.png" alt="柏　静香園" class="">
+        <p>千葉県柏市柏１丁目１‐１１　柏駅前丸井ビル１Ｆ<br>tel：04-7167-6505<br>営業時間：10:00～19:00</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p><small>&copy;2018 seikouen</small></p>
+  </footer>
+</body>
+</html>
