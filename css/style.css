@@ -80,15 +80,34 @@ h1 img{
     
 .pc ul{
     list-style: none;
-    padding-left: 40%;
+    padding-left:36%;
     overflow: hidden;
+	padding-top:5%;
 }
 
 .pc ul li{
     float: left;
-    width: 7%;
+    width: 4%;
+	margin-left:4%;
+	-ms-writing-mode: tb-rl;
+  	writing-mode: vertical-rl;
 }
 
+.pc ul li a{
+    color:#FFFFFF;
+	text-decoration:none;
+	font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+	font-size:150%;
+	
+}
+
+.pc ul li a:hover{
+    color:#C1C14A;
+}
+
+/*.pc ul li img{
+	width:100%;
+}*/
 
 /* section01 */
 #section01{
