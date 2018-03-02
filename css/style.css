@@ -76,34 +76,18 @@ h1 img{
   margin: 0 auto;
   padding: 1.5em 0;
 }
-
-nav{
-  width: 18%;
-  margin: 0 auto;
-  padding: 7em 0;
+    
+.pc ul{
+    list-style: none;
+    padding-left: 40%;
+    overflow: hidden;
 }
 
-nav ul{
-  overflow: hidden;
-  zoom: 1;
-  margin: 0;
-  padding: 0;
+.pc ul li{
+    float: left;
+    width: 7%;
 }
 
-nav ul li{
-  display: block;
-  width: 8%;
-  margin: 0 6%;
-  float: right;
-}
-
-nav ul li a{
-  display: block;
-}
-
-nav ul li a img{
-  width: 100%;
-}
 
 /* section01 */
 #section01{
@@ -269,7 +253,30 @@ nav ul li a img{
 .section06_contact p{
   margin: 0.3em 0 0;
   font-size: 1.2em;
+    overflow: hidden;
 }
+    
+.scrollup{
+    width:70px; 
+	height:100px;
+	padding:10px; 
+	text-align:center; 
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	top:80%;
+	right:3%;
+	display:none;
+    background: url(button.png) no-repeat;
+    background-size: 100%;
+}
+
+.scrollup:hover
+{
+	opacity: 0.85 ;
+}
+
 
 /* footer */
 footer{
